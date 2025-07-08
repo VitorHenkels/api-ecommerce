@@ -15,7 +15,7 @@ class AlterProdutos1751635983150 {
                 name: "ncm",
                 type: "char",
                 length: '8',
-                isNullable: false
+                isNullable: true
             })
         ]);
     }

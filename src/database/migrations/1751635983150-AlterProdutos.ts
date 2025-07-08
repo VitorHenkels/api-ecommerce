@@ -14,7 +14,7 @@ export class AlterProdutos1751635983150 implements MigrationInterface {
                 name: "ncm",
                 type:"char",
                 length: '8',
-                isNullable:false
+                isNullable:true
             })
         ])
 

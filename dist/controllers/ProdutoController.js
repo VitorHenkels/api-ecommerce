@@ -22,12 +22,24 @@ exports.ProdutoController = {
         }
     },
     async buscar(req, res) {
-        res.status(200).json({ status: "Sucesso" });
+        const id = Number(req.params.id);
+        const produto = await ProdutoService_1.ProdutoService.buscarPorId(id);
+        if (!produto)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json(produto);
     },
     async atualizar(req, res) {
-        res.status(200).json({ status: "Sucesso" });
+        const id = Number(req.params.id);
+        const atualizado = await ProdutoService_1.ProdutoService.atualizar(id, req.body);
+        if (!atualizado)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json(atualizado);
     },
     async deletar(req, res) {
-        res.status(200).json({ status: "Sucesso" });
+        const id = Number(req.params.id);
+        const removido = await ProdutoService_1.ProdutoService.deletar(id);
+        if (!removido)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json({ status: "Produto removido com sucesso:", produto: removido });
     },
 };
