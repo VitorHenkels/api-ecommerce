@@ -26,7 +26,7 @@ class CreateProduto1751467137554 {
                     scale: 2
                 },
                 {
-                    name: 'descicao',
+                    name: 'descricao',
                     type: 'text',
                     isNullable: true
                 },

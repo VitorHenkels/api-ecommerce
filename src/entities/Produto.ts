@@ -13,4 +13,7 @@ export class Produto{
 
     @Column()
     descricao!: string;
+
+    @Column()
+    ncm!: string
 }
