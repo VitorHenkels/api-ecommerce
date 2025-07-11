@@ -12,3 +12,14 @@ exercicio para casa
     - deletar
 
 campos da tabela: id, nome, email, password, token
+
+CORS - NAVEGADOR
+CORS(Cross-Origin Resources Sharing) é um mecanismo de segurança dos navegadores que impede requisitações entre origens diferentes, a menos que o servidor permita explicitamente
+
+frontend:https://localhost:4000
+backend api :https://localhost:3000
+
+sem configurar o CORS o navegador vai bloquear essas requisições 
+
+instalação
+npm install cors

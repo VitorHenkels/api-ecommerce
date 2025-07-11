@@ -31,6 +31,7 @@ export const UsuarioController = {
         try {
             const user = await UsuarioService.create(req.body)
             res.status(201).json(user)
+            
         } catch {
             res.status(500).json({ error: serverError })
         }
