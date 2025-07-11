@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { UsuarioController } from "../controllers/UsuarioController";
+import { authJwt } from "../midleware/authJwt";
 
 const routes = Router()
 
-routes.get('/', UsuarioController.getAll)
-routes.get('/:id', UsuarioController.getOn)
-routes.put('/:id', UsuarioController.update)
-routes.delete('/:id', UsuarioController.delete)
-routes.post('/', UsuarioController.create)
+routes.get('/', authJwt, UsuarioController.getAll)
+routes.get('/:id', authJwt,UsuarioController.getOn)
+routes.put('/:id', authJwt,UsuarioController.update)
+routes.delete('/:id', authJwt,UsuarioController.delete)
+routes.post('/', authJwt,UsuarioController.create)
 
 export default routes;
