@@ -6,9 +6,8 @@ const repo = AppDataSource.getRepository(Produto)
 export const ProdutoService = {
     async criar(data: Partial<Produto>): Promise<Produto> {
         const produto = repo.create(data)
-        let result = await repo.save(produto)
-        
-        console.log(result)
+        await repo.save(produto)
+        AppDataSource.destroy()
         return produto
     },
     async listar(): Promise<Produto[]> {
