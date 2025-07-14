@@ -8,6 +8,6 @@ routes.get('/', authJwt, UsuarioController.getAll)
 routes.get('/:id', authJwt,UsuarioController.getOn)
 routes.put('/:id', authJwt,UsuarioController.update)
 routes.delete('/:id', authJwt,UsuarioController.delete)
-routes.post('/', authJwt,UsuarioController.create)
+routes.post('/',UsuarioController.create)
 
 export default routes;
