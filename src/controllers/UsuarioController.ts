@@ -8,8 +8,8 @@ export const UsuarioController = {
         try {
             const user = await UsuarioService.getAll()
             res.json(user)
-        } catch {
-            res.status(500).json({ error: serverError })
+        } catch (error){
+            res.status(500).json({ error: serverError, desc: error })
         }
     },
 
