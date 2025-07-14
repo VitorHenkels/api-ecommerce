@@ -32,8 +32,8 @@ AppDataSource.initialize()
         app.use('/produtos', routeProdutos)
         app.use('/usuarios',routeUser)
         app.use('/login', routeLogin)
-        app.listen(process.env.API_PORT, () => {
-            console.log('Servidor rodando na porta: ', process.env.API_PORT);
+        app.listen(process.env.PORT, () => {
+            console.log('Servidor rodando na porta: ', process.env.PORT);
 
         })
 
